@@ -1,15 +1,20 @@
-<script setup lang="ts">
+<script>
+import bg from '@/assets/images/bg.gif';
 
+export default {
+  data() {
+    return {
+      bg: bg,
+    };
+  },
+};
 </script>
-
-<template>
-
-
-
-</template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
+<style>
+body {
+  background: url('') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>

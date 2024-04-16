@@ -1,22 +1,48 @@
 <template>
-  <div class="container">
-    <div class="profile">
-      <img class="logo"src="./assets/images/profile.jpeg" alt="Profile Picture" />
-      <div class="menacing" id="menacing1">
-        <img src="./assets/images/menacing.png" alt="Menacing..." class="menacess">
+  <div class="flex">
+  <br>
+  <div class="relative flex justify-start md:justify-center lg:justify-start items-center">
+    <div class="relative w-64 h-64 mx-auto md:w-72 md:h-72 lg:w-80 lg:h-80">
+      <img class="w-full h-full object-cover rounded-full hover:shadow-purple-glow transition-shadow duration-500 ease-in-out" src="./assets/images/profile.jpg" alt="Profile Picture" 
+           @mouseover="isHovered = true" 
+           @mouseleave="isHovered = false" />
+      <div class="absolute top-0 left-0 w-12 h-12 transition-opacity duration-100 linear" 
+           :class="{'opacity-0': !isHovered, 'opacity-100': isHovered, 'animate-shake': isHovered}" id="menacing1">
+        <img src="./assets/images/menacing.png" alt="Menacing..." class="w-full h-full object-cover transition duration-200 ease-in-out">
       </div>
-      <div class="menacing" id="menacing2">
-        <img src="./assets/images/menacing.png" alt="Menacing..." class="menacess">
+      <div class="absolute top-0 right-0 w-12 h-12 transition-opacity duration-600 ease-in-out" 
+           :class="{'opacity-0': !isHovered, 'opacity-100': isHovered, 'animate-shake': isHovered}" id="menacing2">
+        <img src="./assets/images/menacing.png" alt="Menacing..." class="w-full h-full object-cover transition duration-200 ease-in-out">
       </div>
-      <div class="menacing" id="menacing3">
-        <img src="./assets/images/menacing.png" alt="Menacing..." class="menacess">
+      <div class="absolute bottom-0 left-0 w-12 h-12 transition-opacity duration-600 ease-in-out" 
+           :class="{'opacity-0': !isHovered, 'opacity-100': isHovered, 'animate-shake': isHovered}" id="menacing3">
+        <img src="./assets/images/menacing.png" alt="Menacing..." class="w-full h-full object-cover transition duration-200 ease-in-out">
       </div>
-      <div class="menacing" id="menacing4">
-        <img src="./assets/images/menacing.png" alt="Menacing..." class="menacess">
+      <div class="absolute bottom-0 right-0 w-12 h-12 transition-opacity duration-600 ease-in-out" 
+           :class="{'opacity-0': !isHovered, 'opacity-100': isHovered, 'animate-shake': isHovered}" id="menacing4">
+        <img src="./assets/images/menacing.png" alt="Menacing..." class="w-full h-full object-cover transition duration-200 ease-in-out">
       </div>
     </div>
   </div>
+  <span class="pl-20">
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600">Arif-TheHuman</h1>
+    <p class="pt-3">Hello! My real name is Muhammad Nur Arif Bin Abdullah Hidup.</p>
+    <p class="pt-3">Certified Cat Lover</p>
+    <p class="pt-3">Professional Human, 10+ Years of Experience</p>
+    <p class="pt-3">Hover On My Profile To See Something Cool!</p>
+  </span>
+</div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isHovered: false,
+    };
+  },
+};
+</script>
 
 <style scoped>
 
@@ -33,65 +59,11 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
-.menacess {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 600ms;
-}
-
-.container:hover .menacess {
-  opacity: 1;
+.animate-shake {
   animation: shake 0.5s; /* Apply the shake animation */
   animation-iteration-count: infinite;
 }
-
-#menacing1 .menacess {
-  top: -10px;
-  left: -10px;
-}
-
-#menacing2 .menacess {
-  top: -10px;
-  right: -10px;
-}
-
-#menacing3 .menacess {
-  bottom: -10px;
-  left: -10px;
-}
-
-#menacing4 .menacess {
-  bottom: -10px;
-  right: -10px;
-}
-
-.logo {
-  border-radius: 50%;
-  height: 20vw;
-  max-height: 200px;
-  min-height: 100px;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  object-fit: cover;
-}
-
-.profile {
-  position: relative;
-  border-radius: 50%;
-  height: 20vw;
-  max-height: 200px;
-  min-height: 100px;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-  object-fit: cover;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #5900b3aa);
+.hover\:shadow-purple-glow:hover {
+  box-shadow: 0 0 10px #4e0ed0, 0 0 20px #4e0ed0, 0 0 30px #4e0ed0, 0 0 40px #4e0ed0;
 }
 </style>
