@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
   <div>
       <img src="./images/assets/profile.jpeg" class="logo vue" alt="Profile Picture" />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
