@@ -4,7 +4,7 @@
 
 <template>
   <div>
-      <img src="./images/assets/profile.jpeg" class="logo vue" alt="Profile Picture" />
+      <img src="./assets/images/profile.jpeg" class="logo vue" alt="Profile Picture" />
   </div>
 </template>
 
