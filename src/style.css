@@ -32,6 +32,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: url('./assets/images/bg.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  image-rendering: pixelated;
 }
 
 h1 {
