@@ -31,6 +31,7 @@
       <p class="pt-3">Professional Human, 10+ Years of Experience</p>
       <p class="pt-3">Favourite Show: Jojo's Bizzare Adventure</p>
       <p class="pt-3">Hover On My Profile To See Something Cool!</p>
+      <p class="pt-3">Hello world</p>
     </span>
   </div>
   <div v-if="showKillerQueen" class="fixed bottom-0 right-0 transform translate-x-1/2 translate-y-1/2">
